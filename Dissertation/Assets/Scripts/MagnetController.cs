@@ -5,6 +5,7 @@ using UnityEngine;
 public class MagnetController : MonoBehaviour
 {
     [SerializeField] private Camera magnetCamera;
+    public GameObject magnet;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +16,14 @@ public class MagnetController : MonoBehaviour
     void Update()
     {
         Ray ray = magnetCamera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit raycastHit)){
-            transform.position = raycastHit.point;
-        }
+        RaycastHit[] raycastHits = Physics.RaycastAll(ray);
+        for (int i = 0; i < raycastHits.Length; i++)
+        {
+            if(raycastHits[i].collider.tag != "Magnet")
+            {
+                transform.position = raycastHits[i].point;
+            }
+        } 
+        
     }
 }
