@@ -21,7 +21,8 @@ public class MagnetController : MonoBehaviour
         {
             if(raycastHits[i].collider.tag != "Magnet")
             {
-                magnet.transform.position = raycastHits[i].point;
+                Vector3 magnetPosition = new Vector3(raycastHits[i].point.x, raycastHits[i].point.y + 2f, raycastHits[i].point.z);
+                magnet.transform.position = magnetPosition;
             }
         } 
         
