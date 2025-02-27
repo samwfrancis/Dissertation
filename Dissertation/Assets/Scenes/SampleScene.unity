@@ -11687,6 +11687,7 @@ GameObject:
   - component: {fileID: 1100682797}
   - component: {fileID: 1100682796}
   - component: {fileID: 1100682795}
+  - component: {fileID: 1100682801}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -11816,12 +11817,28 @@ Transform:
   m_GameObject: {fileID: 1100682794}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 256.67, y: 67.17, z: 249.728}
+  m_LocalPosition: {x: 230.59, y: 53.91, z: 267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1100682801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100682794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc228be0dd5b4748af80074cb42b016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 1616053143}
+  player: {fileID: 1224442817}
+  ballIsChild: 0
+  distance: 0
 --- !u!1 &1107718373
 GameObject:
   m_ObjectHideFlags: 0
@@ -14167,7 +14184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b224c7edb6b215042b2df53885ee4d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 100
+  strength: 1
   direction: {x: 0, y: 0, z: 3}
 --- !u!43 &1709800149
 Mesh:
