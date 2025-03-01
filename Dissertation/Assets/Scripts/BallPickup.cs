@@ -19,7 +19,7 @@ public class BallPickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distance = Vector3.Distance(player.transform.position, ball.transform.position); 
+        distance = Vector3.Distance(ball.transform.position, player.transform.position); 
 
         if (Input.GetKeyDown(KeyCode.E))
             if(ballIsChild)
@@ -28,9 +28,13 @@ public class BallPickup : MonoBehaviour
                 ballIsChild = false;
             }
             else if (distance < 2){
-                ball.transform.SetParent(ball.transform);
+                ball.transform.SetParent(player.transform);
                 ballIsChild = true;
             }
+        
+        if (ballIsChild){
+            
+        }
            
     }
 }
