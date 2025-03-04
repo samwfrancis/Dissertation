@@ -7,7 +7,9 @@ public class BallPickup : MonoBehaviour
     [SerializeField] private GameObject ball;
     [SerializeField] private GameObject player;
 
-    public bool ballIsChild = false;
+    List<Rigidbody> rgBalls = new List<Rigidbody>(); 
+
+    public bool ballIsFollowing = false;
 
     public float distance;
     // Start is called before the first frame update
@@ -22,19 +24,25 @@ public class BallPickup : MonoBehaviour
         distance = Vector3.Distance(ball.transform.position, player.transform.position); 
 
         if (Input.GetKeyDown(KeyCode.E))
-            if(ballIsChild)
+            if(ballIsFollowing)
             {
-                ball.transform.SetParent(null);
-                ballIsChild = false;
+                ballIsFollowing = false;
             }
             else if (distance < 2){
-                ball.transform.SetParent(player.transform);
-                ballIsChild = true;
+                ballIsFollowing = true;
             }
-        
-        if (ballIsChild){
-            
-        }
            
+    }
+
+    void FixedUpdate()
+    {
+        if (ballIsFollowing)
+        {
+            foreach(Rigidbody rgball in rgBalls)
+            {
+                rgball.AddForce((ball.transform.position - rgball.position) * 200f * Time.fixedDeltaTime);
+            }
+        }
+        
     }
 }
