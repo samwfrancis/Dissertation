@@ -11835,9 +11835,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fc228be0dd5b4748af80074cb42b016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 1616053143}
+  ball: {fileID: 1100682794}
   player: {fileID: 1224442817}
-  ballIsChild: 0
+  ballIsFollowing: 0
   distance: 0
 --- !u!1 &1107718373
 GameObject:

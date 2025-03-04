@@ -7,7 +7,7 @@ public class BallPickup : MonoBehaviour
     [SerializeField] private GameObject ball;
     [SerializeField] private GameObject player;
 
-    List<Rigidbody> rgBalls = new List<Rigidbody>(); 
+    Rigidbody ballrb;
 
     public bool ballIsFollowing = false;
 
@@ -15,7 +15,7 @@ public class BallPickup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ballrb = ball.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -38,10 +38,8 @@ public class BallPickup : MonoBehaviour
     {
         if (ballIsFollowing)
         {
-            foreach(Rigidbody rgball in rgBalls)
-            {
-                rgball.AddForce((ball.transform.position - rgball.position) * 200f * Time.fixedDeltaTime);
-            }
+                ballrb.AddForce((player.transform.position - ballrb.position) * 200f * Time.fixedDeltaTime);
+            
         }
         
     }
