@@ -39,6 +39,18 @@ public class Timer : MonoBehaviour
             }
         }
 
+        if (magnetDistance < 3){
+            if (Input.GetKeyDown(KeyCode.E)){
+                magnetTime = secondsElasped;
+            }
+        }
+
+        if (boulderDistance < 3){
+            if (Input.GetKeyDown(KeyCode.E)){
+                boulderTime = secondsElasped;
+            }
+        }
+
     }
 
     public float GetWindTime(){
