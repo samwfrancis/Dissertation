@@ -44,6 +44,7 @@ public class PlayerMagnetSwap : MonoBehaviour
                 magnetPoint.SetActive(false);
                 playerCamera.SetActive(true); // Assuming you have the player's camera
                 magnetCamera.SetActive(false);
+                magnet.transform.position = new Vector3(276.15f, 2.6f, 35.11f);
             }
             else if (distance < 5)
             {
