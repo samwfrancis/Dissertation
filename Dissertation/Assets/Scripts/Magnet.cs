@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Magnet : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class Magnet : MonoBehaviour
         foreach(Rigidbody rgball in rgBalls)
         {
             rgball.AddForce((magnetPoint.position - rgball.position) * forcefactor * Time.fixedDeltaTime);
+            Gamepad.current.SetMotorSpeeds(0.123f, 0.234f);
         }
     }
 

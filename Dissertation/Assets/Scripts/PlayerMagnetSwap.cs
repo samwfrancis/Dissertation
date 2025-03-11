@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMagnetSwap : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class PlayerMagnetSwap : MonoBehaviour
     private bool isMagnetActive = false; // Track whether the magnet is currently active or not.
 
     public float distance;
+
+
+    //private StarterAssetsInputs _input;
+
+    Gamepad gamepad = Gamepad.current;
     
 
     
@@ -24,6 +30,7 @@ public class PlayerMagnetSwap : MonoBehaviour
     void Start()
     {
         // Initial setup if needed
+        //_input = GetComponent<StarterAssetsInputs>();
         
     }
 
@@ -35,7 +42,7 @@ public class PlayerMagnetSwap : MonoBehaviour
         distance = Vector3.Distance(magnet.transform.position , playerLocation.transform.position);
         
             
-        if (Input.GetKeyDown(KeyCode.E)) // Check if the "E" key is pressed
+        if (gamepad.buttonWest.wasPressedThisFrame) // Check if the "E" key is pressed
         {
             if (isMagnetActive)
             {
