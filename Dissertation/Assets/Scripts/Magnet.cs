@@ -35,6 +35,7 @@ public class Magnet : MonoBehaviour
     void OnTriggerExit(Collider other){
         if(other.CompareTag("Magnetic")){
             rgBalls.Remove(other.GetComponent<Rigidbody>());
+            Gamepad.current.SetMotorSpeeds(0,0);
         }
     }
 }

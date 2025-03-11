@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class BallPickup : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class BallPickup : MonoBehaviour
     {
         distance = Vector3.Distance(ball.transform.position, player.transform.position); 
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Gamepad.current.buttonWest.wasPressedThisFrame)
             if(ballIsFollowing)
             {
                 ballIsFollowing = false;

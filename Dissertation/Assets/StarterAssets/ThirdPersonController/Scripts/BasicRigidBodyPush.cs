@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class BasicRigidBodyPush : MonoBehaviour
 {
@@ -6,9 +7,14 @@ public class BasicRigidBodyPush : MonoBehaviour
 	public bool canPush;
 	[Range(0.5f, 5f)] public float strength = 1.1f;
 
+	public bool isVibrating;
+	public float vibrateTimer = 0;
+
 	private void OnControllerColliderHit(ControllerColliderHit hit)
 	{
 		if (canPush) PushRigidBodies(hit);
+
+		
 	}
 
 	private void PushRigidBodies(ControllerColliderHit hit)
@@ -31,5 +37,27 @@ public class BasicRigidBodyPush : MonoBehaviour
 
 		// Apply the push and take strength into account
 		body.AddForce(pushDir * strength, ForceMode.Impulse);
+		Debug.Log("Pushing");
+		Gamepad.current.SetMotorSpeeds(0.123f, 0.234f);
+		isVibrating = true;
+	}
+
+	void Update()
+	{
+		if (isVibrating)
+		{
+			isVibrating = false;
+			vibrateTimer = 0.05f;
+			if(vibrateTimer > 0)
+			{
+				vibrateTimer -= Time.deltaTime;
+
+				if (vibrateTimer <= 0.0485)
+				{
+					
+					Gamepad.current.SetMotorSpeeds(0,0);
+				}
+			}
+		}
 	}
 }

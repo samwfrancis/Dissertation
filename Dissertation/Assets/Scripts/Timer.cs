@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Timer : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class Timer : MonoBehaviour
     public float windDistance;
     public float magnetDistance;
     public float boulderDistance;
+
+    Gamepad gamepad = Gamepad.current;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +34,7 @@ public class Timer : MonoBehaviour
         if (shipPart1 != null){
             magnetDistance = Vector3.Distance(shipPart1.transform.position, player.transform.position);
             if (magnetDistance < 5){
-                if (Input.GetKeyDown(KeyCode.E)){
+                if (gamepad.buttonWest.wasPressedThisFrame){
                 magnetTime = secondsElasped;
                 Destroy(shipPart1);
             }
@@ -41,7 +44,7 @@ public class Timer : MonoBehaviour
         if (shipPart2 != null){
             boulderDistance = Vector3.Distance(shipPart2.transform.position, player.transform.position);
             if (boulderDistance < 5){
-                if (Input.GetKeyDown(KeyCode.E)){
+                if (gamepad.buttonWest.wasPressedThisFrame){
                 boulderTime = secondsElasped;
                 Destroy(shipPart2);
                 }
@@ -51,7 +54,7 @@ public class Timer : MonoBehaviour
         if (shipPart3 != null){
             windDistance = Vector3.Distance(shipPart3.transform.position, player.transform.position);
              if(windDistance < 5){
-                if (Input.GetKeyDown(KeyCode.E)){
+                if (gamepad.buttonWest.wasPressedThisFrame){
                 windTime = secondsElasped;
                 Destroy(shipPart3);
                 }
