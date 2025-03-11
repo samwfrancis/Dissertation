@@ -60,6 +60,11 @@ public class Timer : MonoBehaviour
                 }
             }
         }
+
+        if (magnetTime > 0 && boulderTime > 0 && windTime > 0)
+        {
+            Debug.Log("You Win !");
+        }
     }
 
     public float GetWindTime(){

@@ -5,11 +5,13 @@ using UnityEngine;
 public class WindGoalCleared : MonoBehaviour
 {
 
-    private Animator anim;
+    public GameObject shipPart;
+    public GameObject platform;
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
+        shipPart.SetActive(false);
+        platform.SetActive(false);
     }
 
     // Update is called once per frame
@@ -21,7 +23,8 @@ public class WindGoalCleared : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
       if (other.CompareTag("Ball")){
-        anim.SetTrigger("EnterGoal");
+        shipPart.SetActive(true);
+        platform.SetActive(true);
       }  
     }
 }
