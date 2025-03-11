@@ -15,6 +15,8 @@ public class PlayerMagnetSwap : MonoBehaviour
     
     [SerializeField] private GameObject playerLocation;
 
+    public GameObject popUp;
+
     private bool isMagnetActive = false; // Track whether the magnet is currently active or not.
 
     public float distance;
@@ -31,6 +33,7 @@ public class PlayerMagnetSwap : MonoBehaviour
     {
         // Initial setup if needed
         //_input = GetComponent<StarterAssetsInputs>();
+        popUp.SetActive(false);
         
     }
 
@@ -40,6 +43,10 @@ public class PlayerMagnetSwap : MonoBehaviour
 
         
         distance = Vector3.Distance(magnet.transform.position , playerLocation.transform.position);
+
+        if (distance > 5) popUp.SetActive(false);
+
+        if (distance < 5) popUp.SetActive(true);
         
             
         if (gamepad.buttonWest.wasPressedThisFrame) // Check if the "E" key is pressed

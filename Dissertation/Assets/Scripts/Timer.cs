@@ -16,6 +16,10 @@ public class Timer : MonoBehaviour
     public GameObject shipPart2;
     public GameObject shipPart3;
 
+    public GameObject popUp1;
+    public GameObject popUp2;
+    public GameObject popUp3;
+
     public float windDistance;
     public float magnetDistance;
     public float boulderDistance;
@@ -24,7 +28,9 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        popUp1.SetActive(false);
+        popUp2.SetActive(false);
+        popUp3.SetActive(false);
     }
 
     // Update is called once per frame
@@ -33,6 +39,9 @@ public class Timer : MonoBehaviour
         secondsElasped = Time.time;
         if (shipPart1 != null){
             magnetDistance = Vector3.Distance(shipPart1.transform.position, player.transform.position);
+
+            if (magnetDistance > 5) popUp1.SetActive(false);
+            if (magnetDistance < 5) popUp1.SetActive(true);
             if (magnetDistance < 5){
                 if (gamepad.buttonWest.wasPressedThisFrame){
                 magnetTime = secondsElasped;
@@ -43,6 +52,9 @@ public class Timer : MonoBehaviour
 
         if (shipPart2 != null){
             boulderDistance = Vector3.Distance(shipPart2.transform.position, player.transform.position);
+
+            if (boulderDistance > 5) popUp2.SetActive(false);
+            if (boulderDistance < 5) popUp2.SetActive(true);
             if (boulderDistance < 5){
                 if (gamepad.buttonWest.wasPressedThisFrame){
                 boulderTime = secondsElasped;
@@ -53,6 +65,9 @@ public class Timer : MonoBehaviour
 
         if (shipPart3 != null){
             windDistance = Vector3.Distance(shipPart3.transform.position, player.transform.position);
+
+            if (windDistance > 5) popUp3.SetActive(false);
+            if (windDistance < 5) popUp3.SetActive(true);
              if(windDistance < 5){
                 if (gamepad.buttonWest.wasPressedThisFrame){
                 windTime = secondsElasped;
