@@ -22,13 +22,14 @@ public class Magnet : MonoBehaviour
         foreach(Rigidbody rgball in rgBalls)
         {
             rgball.AddForce((magnetPoint.position - rgball.position) * forcefactor * Time.fixedDeltaTime);
-            Gamepad.current.SetMotorSpeeds(0.123f, 0.234f);
+            
         }
     }
 
     void OnTriggerEnter(Collider other){
         if(other.CompareTag("Magnetic"))
             rgBalls.Add(other.GetComponent<Rigidbody>());
+            Gamepad.current.SetMotorSpeeds(0.123f, 0.234f);
     }
 
     void OnTriggerExit(Collider other){

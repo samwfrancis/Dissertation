@@ -10414,6 +10414,7 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
+  interact: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -25116,6 +25117,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnetCamera: {fileID: 860484361}
   magnet: {fileID: 691985636}
+  playerControls:
+    m_Name: Player Controls
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b1d1bcbb-4af1-4329-9f53-e1b71d40297a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 1547d0c2-a333-44a0-9278-db1d7f1f095c
+      m_Path: <Gamepad>/leftStick
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 0
+    m_Flags: 0
+  mousePos: {x: 0, y: 0, z: 0}
+  newPos: {x: 0, y: 0, z: 0}
+  value: {x: 500, y: 280}
 --- !u!114 &1493890607
 MonoBehaviour:
   m_ObjectHideFlags: 0
