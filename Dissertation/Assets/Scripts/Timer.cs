@@ -7,9 +7,11 @@ public class Timer : MonoBehaviour
 {
     public float secondsElasped;
 
-    public float windTime;
-    public float magnetTime;
-    public float boulderTime;
+    public float windTimeComplete;
+    public float magnetTimeComplete;
+    public float magnetTimeStart;
+    public float boulderTimeComplete;
+    public float boulderTimeStart;
 
     public GameObject player;
     public GameObject shipPart1;
@@ -44,7 +46,7 @@ public class Timer : MonoBehaviour
             if (magnetDistance < 5) popUp1.SetActive(true);
             if (magnetDistance < 5){
                 if (gamepad.buttonWest.wasPressedThisFrame){
-                magnetTime = secondsElasped;
+                magnetTimeComplete = secondsElasped;
                 Destroy(shipPart1);
             }
         }
@@ -57,7 +59,7 @@ public class Timer : MonoBehaviour
             if (boulderDistance < 5) popUp2.SetActive(true);
             if (boulderDistance < 5){
                 if (gamepad.buttonWest.wasPressedThisFrame){
-                boulderTime = secondsElasped;
+                boulderTimeComplete = secondsElasped;
                 Destroy(shipPart2);
                 }
             }
@@ -70,27 +72,16 @@ public class Timer : MonoBehaviour
             if (windDistance < 5) popUp3.SetActive(true);
              if(windDistance < 5){
                 if (gamepad.buttonWest.wasPressedThisFrame){
-                windTime = secondsElasped;
+                windTimeComplete = secondsElasped;
                 Destroy(shipPart3);
                 }
             }
         }
 
-        if (magnetTime > 0 && boulderTime > 0 && windTime > 0)
+        if (magnetTimeComplete > 0 && boulderTimeComplete > 0 && windTimeComplete > 0)
         {
             Debug.Log("You Win !");
         }
     }
-
-    public float GetWindTime(){
-        return windTime;
-    }
-
-    public void SetWindTime(float inputTime){
-        windTime = inputTime;
-    } 
-
-
-
 
 }

@@ -9,6 +9,7 @@ TagManager:
   - Magnet
   - windArea
   - Ball
+  - Boulder
   layers:
   - Default
   - TransparentFX

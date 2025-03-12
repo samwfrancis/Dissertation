@@ -17,6 +17,10 @@ public class PlayerMagnetSwap : MonoBehaviour
 
     public GameObject popUp;
 
+    public float secondsElasped;
+    public float magnetTimeStart;
+    private int numberSwitched = 0;
+
     private bool isMagnetActive = false; // Track whether the magnet is currently active or not.
 
     public float distance;
@@ -41,7 +45,7 @@ public class PlayerMagnetSwap : MonoBehaviour
     void Update()
     {
 
-        
+        secondsElasped = Time.time;
         distance = Vector3.Distance(magnet.transform.position , playerLocation.transform.position);
 
         if (distance > 5) popUp.SetActive(false);
@@ -67,6 +71,11 @@ public class PlayerMagnetSwap : MonoBehaviour
                 magnetPoint.SetActive(true);
                 playerCamera.SetActive(false);
                 magnetCamera.SetActive(true);
+                if(numberSwitched <= 0)
+                {
+                    magnetTimeStart = secondsElasped;
+                }
+                numberSwitched =+ 1;
             }
 
             // Toggle the state
