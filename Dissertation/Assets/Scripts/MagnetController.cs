@@ -14,9 +14,9 @@ public class MagnetController : MonoBehaviour
 
     public Vector3 newPos; 
 
-    Vector3 pos = new Vector3(500,280,0);
+    Vector3 pos = new Vector3(280,2,40);
 
-    public Vector2 value = new Vector2(500,280);
+    public Vector2 value = new Vector2(280,40);
 
     private void OnEnable()
     {
@@ -38,8 +38,8 @@ public class MagnetController : MonoBehaviour
     void Update()
     {
         value = playerControls.ReadValue<Vector2>();
-        newPos = new Vector3(newPos.x + value.x, newPos.y + value.y, 0);
-        Ray ray = magnetCamera.ScreenPointToRay(newPos);
+        newPos = new Vector3(newPos.x + (value.x * 0.1f), 2, newPos.z + (value.y * 0.1f));
+        /*Ray ray = magnetCamera.ScreenPointToRay(newPos);
         RaycastHit[] raycastHits = Physics.RaycastAll(ray);
         for (int i = 0; i < raycastHits.Length; i++)
         {
@@ -48,7 +48,9 @@ public class MagnetController : MonoBehaviour
                 Vector3 magnetPosition = new Vector3(raycastHits[i].point.x, raycastHits[i].point.y + 2f, raycastHits[i].point.z);
                 magnet.transform.position = magnetPosition;
             }
-        } 
+        }*/
+
+        magnet.transform.position = newPos;
         
     }
 }

@@ -41,7 +41,7 @@ public class PlayerMagnetSwap : MonoBehaviour
         // Initial setup if needed
         //_input = GetComponent<StarterAssetsInputs>();
         popUp.SetActive(false);
-        
+            
     }
 
     // Update is called once per frame
@@ -87,5 +87,6 @@ public class PlayerMagnetSwap : MonoBehaviour
             isMagnetActive = !isMagnetActive;
         }
     }
+
 }
 
