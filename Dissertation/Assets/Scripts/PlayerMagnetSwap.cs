@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.IO;
 
 public class PlayerMagnetSwap : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class PlayerMagnetSwap : MonoBehaviour
     private bool isMagnetActive = false; // Track whether the magnet is currently active or not.
 
     public float distance;
+
+    public string path = Application.dataPath + "/Log.txt";
 
 
     //private StarterAssetsInputs _input;
@@ -74,6 +77,8 @@ public class PlayerMagnetSwap : MonoBehaviour
                 if(numberSwitched <= 0)
                 {
                     magnetTimeStart = secondsElasped;
+                    string content = "Magnet Start Time: " + magnetTimeStart + "\n";
+                    File.AppendAllText(path, content);
                 }
                 numberSwitched =+ 1;
             }

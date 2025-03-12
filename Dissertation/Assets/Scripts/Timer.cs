@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.IO;
 
 public class Timer : MonoBehaviour
 {
+    public string user;
     public float secondsElasped;
 
     public float windTimeComplete;
     public float magnetTimeComplete;
-    public float magnetTimeStart;
     public float boulderTimeComplete;
-    public float boulderTimeStart;
 
     public GameObject player;
     public GameObject shipPart1;
@@ -26,10 +26,13 @@ public class Timer : MonoBehaviour
     public float magnetDistance;
     public float boulderDistance;
 
+    public string path = Application.dataPath + "/Log.txt";
+
     Gamepad gamepad = Gamepad.current;
     // Start is called before the first frame update
     void Start()
     {
+        CreateText();
         popUp1.SetActive(false);
         popUp2.SetActive(false);
         popUp3.SetActive(false);
@@ -47,7 +50,10 @@ public class Timer : MonoBehaviour
             if (magnetDistance < 5){
                 if (gamepad.buttonWest.wasPressedThisFrame){
                 magnetTimeComplete = secondsElasped;
+                string content = "Magnet Completion Time: " + magnetTimeComplete + "\n";
+                File.AppendAllText(path, content);
                 Destroy(shipPart1);
+                popUp1.SetActive(false);
             }
         }
         }
@@ -60,7 +66,10 @@ public class Timer : MonoBehaviour
             if (boulderDistance < 5){
                 if (gamepad.buttonWest.wasPressedThisFrame){
                 boulderTimeComplete = secondsElasped;
+                string content = "Boulder Completion Time: " + boulderTimeComplete + "\n";
+                File.AppendAllText(path, content);
                 Destroy(shipPart2);
+                popUp2.SetActive(false);
                 }
             }
         }
@@ -73,7 +82,10 @@ public class Timer : MonoBehaviour
              if(windDistance < 5){
                 if (gamepad.buttonWest.wasPressedThisFrame){
                 windTimeComplete = secondsElasped;
+                string content = "Wind Completion Time: " + windTimeComplete + "\n";
+                File.AppendAllText(path, content);
                 Destroy(shipPart3);
+                popUp3.SetActive(false);
                 }
             }
         }
@@ -82,6 +94,19 @@ public class Timer : MonoBehaviour
         {
             Debug.Log("You Win !");
         }
+    }
+
+    void CreateText()
+    {
+
+        if(!File.Exists(path))
+        {
+            File.WriteAllText(path, "Time Log \n\n");
+        }
+
+        string content = "User: " + user + "\n";
+
+        File.AppendAllText(path, content);
     }
 
 }

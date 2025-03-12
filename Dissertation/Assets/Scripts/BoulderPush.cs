@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class BoulderPush : MonoBehaviour
 {
 
     public float secondsElasped;
     public float boulderTimeStart;
+
+    private int timesPushed = 0;
+
+    public string path = Application.dataPath + "/Log.txt";
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +24,17 @@ public class BoulderPush : MonoBehaviour
         secondsElasped = Time.time;
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collider)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collider.gameObject.CompareTag("Player"))
         {
-            boulderTimeStart = secondsElasped;
+            if(timesPushed <= 0)
+            {
+                boulderTimeStart = secondsElasped;
+                string content = "Boulder Start Time: " + boulderTimeStart + "\n";
+                File.AppendAllText(path, content);
+            }
+            timesPushed += 1;
         }
     }
 }

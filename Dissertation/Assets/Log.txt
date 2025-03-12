@@ -1,0 +1,13 @@
+Time Log 
+
+User: Sam
+Magnet Start Time: 4.944054
+Boulder Start Time: 207.1785
+Boulder Completion Time: 210.4199
+Wind Start Time: 231.94
+Wind Completion Time: 247.4
+User: Sam
+Boulder Start Time: 20.15965
+User: Sam
+User: Sam
+Boulder Start Time: 17.73827
