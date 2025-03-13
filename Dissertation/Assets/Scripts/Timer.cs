@@ -10,20 +10,24 @@ public class Timer : MonoBehaviour
     public float secondsElasped;
 
     public float windTimeComplete;
-    public float magnetTimeComplete;
+    public float magnetWithRumbleTimeComplete;
+    public float magnetWithoutRumbleTimeComplete;
     public float boulderTimeComplete;
 
     public GameObject player;
     public GameObject shipPart1;
     public GameObject shipPart2;
     public GameObject shipPart3;
+    public GameObject shipPart4;
 
     public GameObject popUp1;
     public GameObject popUp2;
     public GameObject popUp3;
+    public GameObject popUp4;
 
     public float windDistance;
-    public float magnetDistance;
+    public float magnetWithRumbleDistance;
+    public float magnetWithoutRumbleDistance;
     public float boulderDistance;
 
     public string path = Application.dataPath + "/Log.txt";
@@ -43,14 +47,14 @@ public class Timer : MonoBehaviour
     {
         secondsElasped = Time.time;
         if (shipPart1 != null){
-            magnetDistance = Vector3.Distance(shipPart1.transform.position, player.transform.position);
+            magnetWithRumbleDistance = Vector3.Distance(shipPart1.transform.position, player.transform.position);
 
-            if (magnetDistance > 5) popUp1.SetActive(false);
-            if (magnetDistance < 5) popUp1.SetActive(true);
-            if (magnetDistance < 5){
+            if (magnetWithRumbleDistance > 5) popUp1.SetActive(false);
+            if (magnetWithRumbleDistance < 5) popUp1.SetActive(true);
+            if (magnetWithRumbleDistance < 5){
                 if (gamepad.buttonWest.wasPressedThisFrame){
-                magnetTimeComplete = secondsElasped;
-                string content = "Magnet Completion Time: " + magnetTimeComplete + "\n";
+                magnetWithRumbleTimeComplete = secondsElasped;
+                string content = "Magnet with rumble completion time: " + magnetWithRumbleTimeComplete + "\n";
                 File.AppendAllText(path, content);
                 Destroy(shipPart1);
                 popUp1.SetActive(false);
@@ -66,7 +70,7 @@ public class Timer : MonoBehaviour
             if (boulderDistance < 5){
                 if (gamepad.buttonWest.wasPressedThisFrame){
                 boulderTimeComplete = secondsElasped;
-                string content = "Boulder Completion Time: " + boulderTimeComplete + "\n";
+                string content = "Boulder completion time: " + boulderTimeComplete + "\n";
                 File.AppendAllText(path, content);
                 Destroy(shipPart2);
                 popUp2.SetActive(false);
@@ -82,7 +86,7 @@ public class Timer : MonoBehaviour
              if(windDistance < 5){
                 if (gamepad.buttonWest.wasPressedThisFrame){
                 windTimeComplete = secondsElasped;
-                string content = "Wind Completion Time: " + windTimeComplete + "\n";
+                string content = "Wind completion time: " + windTimeComplete + "\n";
                 File.AppendAllText(path, content);
                 Destroy(shipPart3);
                 popUp3.SetActive(false);
@@ -90,7 +94,23 @@ public class Timer : MonoBehaviour
             }
         }
 
-        if (magnetTimeComplete > 0 && boulderTimeComplete > 0 && windTimeComplete > 0)
+        if (shipPart4 != null){
+            magnetWithoutRumbleDistance = Vector3.Distance(shipPart4.transform.position, player.transform.position);
+
+            if (magnetWithoutRumbleDistance > 5) popUp4.SetActive(false);
+            if (magnetWithoutRumbleDistance < 5) popUp4.SetActive(true);
+            if (magnetWithoutRumbleDistance < 5){
+                if (gamepad.buttonWest.wasPressedThisFrame){
+                magnetWithoutRumbleTimeComplete = secondsElasped;
+                string content = "Magnet without rumble completion time: " + magnetWithRumbleTimeComplete + "\n";
+                File.AppendAllText(path, content);
+                Destroy(shipPart4);
+                popUp4.SetActive(false);
+            }
+        }
+        }
+
+        if (magnetWithRumbleTimeComplete > 0 && boulderTimeComplete > 0 && windTimeComplete > 0 && magnetWithoutRumbleTimeComplete > 0)
         {
             Debug.Log("You Win !");
         }

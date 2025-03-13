@@ -8,23 +8,31 @@ using System.IO;
 public class PlayerMagnetSwap : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject magnetPoint;
-    [SerializeField] private GameObject magnet;
+    [SerializeField] private GameObject magnetPointWithRumble;
+    [SerializeField] private GameObject magnetPointWithoutRumble;
+    [SerializeField] private GameObject magnetWithRumble;
+    [SerializeField] private GameObject magnetWithoutRumble;
 
-    [SerializeField] private GameObject magnetCamera;
+    [SerializeField] private GameObject magnetCameraWithRumble;
+    [SerializeField] private GameObject magnetCameraWithoutRumble;
     [SerializeField] private GameObject playerCamera;
     
     [SerializeField] private GameObject playerLocation;
 
-    public GameObject popUp;
+    public GameObject popUpWithRumble;
+    public GameObject popUpWithoutRumble;
 
     public float secondsElasped;
-    public float magnetTimeStart;
-    private int numberSwitched = 0;
+    public float magnetTimeStartWithRumble;
+    public float magnetTimeStartWithoutRumble;
+    private int numberSwitchedWithRumble = 0;
+    private int numberSwitchedWithoutRumble = 0;
 
-    private bool isMagnetActive = false; // Track whether the magnet is currently active or not.
+    private bool isMagnetWithRumbleActive = false; // Track whether the magnet is currently active or not.
+    private bool isMagnetWithoutRumbleActive = false;
 
-    public float distance;
+    public float distanceWithRumble;
+    public float distanceWithoutRumble;
 
     public string path = Application.dataPath + "/Log.txt";
 
@@ -40,7 +48,8 @@ public class PlayerMagnetSwap : MonoBehaviour
     {
         // Initial setup if needed
         //_input = GetComponent<StarterAssetsInputs>();
-        popUp.SetActive(false);
+        popUpWithoutRumble.SetActive(false);
+        popUpWithRumble.SetActive(false);
             
     }
 
@@ -49,42 +58,74 @@ public class PlayerMagnetSwap : MonoBehaviour
     {
 
         secondsElasped = Time.time;
-        distance = Vector3.Distance(magnet.transform.position , playerLocation.transform.position);
+        distanceWithRumble = Vector3.Distance(magnetWithRumble.transform.position , playerLocation.transform.position);
+        distanceWithoutRumble = Vector3.Distance(magnetWithoutRumble.transform.position , playerLocation.transform.position);
 
-        if (distance > 5) popUp.SetActive(false);
+        if (distanceWithRumble > 5) popUpWithRumble.SetActive(false);
+        if (distanceWithRumble < 5) popUpWithRumble.SetActive(true);
 
-        if (distance < 5) popUp.SetActive(true);
+        if (distanceWithoutRumble > 5) popUpWithoutRumble.SetActive(false);
+        if (distanceWithoutRumble < 5) popUpWithoutRumble.SetActive(true);
         
             
         if (gamepad.buttonWest.wasPressedThisFrame) // Check if the "E" key is pressed
         {
-            if (isMagnetActive)
+            if (isMagnetWithRumbleActive)
             {
                 // Switch back to the player
                 player.SetActive(true);
-                magnetPoint.SetActive(false);
+                magnetPointWithRumble.SetActive(false);
                 playerCamera.SetActive(true); // Assuming you have the player's camera
-                magnetCamera.SetActive(false);
-                magnet.transform.position = new Vector3(276.15f, 2.6f, 35.11f);
+                magnetCameraWithRumble.SetActive(false);
+                magnetWithRumble.transform.position = new Vector3(276.15f, 2.6f, 77f);
             }
-            else if (distance < 5)
+            else if (distanceWithRumble < 5)
             {
                 // Switch to the magnet
                 player.SetActive(false);
-                magnetPoint.SetActive(true);
+                magnetPointWithRumble.SetActive(true);
                 playerCamera.SetActive(false);
-                magnetCamera.SetActive(true);
-                if(numberSwitched <= 0)
+                magnetCameraWithRumble.SetActive(true);
+                if(numberSwitchedWithRumble <= 0)
                 {
-                    magnetTimeStart = secondsElasped;
-                    string content = "Magnet Start Time: " + magnetTimeStart + "\n";
+                    magnetTimeStartWithRumble = secondsElasped;
+                    string content = "Magnet Start Time: " + magnetTimeStartWithRumble + "\n";
                     File.AppendAllText(path, content);
                 }
-                numberSwitched =+ 1;
+                numberSwitchedWithRumble =+ 1;
             }
 
             // Toggle the state
-            isMagnetActive = !isMagnetActive;
+            isMagnetWithRumbleActive = !isMagnetWithRumbleActive;
+
+
+            if (isMagnetWithoutRumbleActive)
+            {
+                // Switch back to the player
+                player.SetActive(true);
+                magnetPointWithoutRumble.SetActive(false);
+                playerCamera.SetActive(true); // Assuming you have the player's camera
+                magnetCameraWithoutRumble.SetActive(false);
+                magnetWithoutRumble.transform.position = new Vector3(276.15f, 2.6f, 35.11f);
+            }
+            else if (distanceWithoutRumble < 5)
+            {
+                // Switch to the magnet
+                player.SetActive(false);
+                magnetPointWithoutRumble.SetActive(true);
+                playerCamera.SetActive(false);
+                magnetCameraWithoutRumble.SetActive(true);
+                if(numberSwitchedWithoutRumble <= 0)
+                {
+                    magnetTimeStartWithoutRumble = secondsElasped;
+                    string content = "Magnet Start Time: " + magnetTimeStartWithoutRumble + "\n";
+                    File.AppendAllText(path, content);
+                }
+                numberSwitchedWithoutRumble =+ 1;
+            }
+
+            // Toggle the state
+            isMagnetWithoutRumbleActive = !isMagnetWithoutRumbleActive;
         }
     }
 

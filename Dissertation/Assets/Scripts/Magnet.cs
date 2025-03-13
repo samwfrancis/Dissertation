@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class Magnet : MonoBehaviour
 {
     public float forcefactor = 200f;
+    public bool isRumble;
 
     List<Rigidbody> rgBalls = new List<Rigidbody>(); 
 
@@ -29,7 +30,11 @@ public class Magnet : MonoBehaviour
     void OnTriggerEnter(Collider other){
         if(other.CompareTag("Magnetic"))
             rgBalls.Add(other.GetComponent<Rigidbody>());
-            Gamepad.current.SetMotorSpeeds(0.123f, 0.234f);
+            if (isRumble)
+            {
+                Gamepad.current.SetMotorSpeeds(0.123f, 0.234f);
+            }
+            
     }
 
     void OnTriggerExit(Collider other){
