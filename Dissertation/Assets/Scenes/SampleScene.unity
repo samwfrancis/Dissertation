@@ -2124,7 +2124,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 2123291193}
+  m_Mesh: {fileID: 2008717750}
 --- !u!33 &119930088
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -8990,7 +8990,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1774080757}
+  m_Mesh: {fileID: 603615917}
 --- !u!33 &320105921
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -11364,7 +11364,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1765231259}
+  m_Mesh: {fileID: 862368590}
 --- !u!33 &451053403
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -12902,6 +12902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 563783188}
   shipPart: {fileID: 451053401}
+  ball: {fileID: 0}
 --- !u!65 &487619722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13756,7 +13757,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1098963887}
+  m_Mesh: {fileID: 1883832452}
 --- !u!33 &525968295
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -14348,7 +14349,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1359824936}
+  m_Mesh: {fileID: 75673215}
 --- !u!33 &554304568
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -14846,7 +14847,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1283511920}
+  m_Mesh: {fileID: 1698245571}
 --- !u!33 &563783191
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -16318,7 +16319,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 2045423650}
+  m_Mesh: {fileID: 709055410}
 --- !u!33 &631211368
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -19088,7 +19089,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 2019896692}
+  m_Mesh: {fileID: 1318594917}
 --- !u!33 &650182560
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -21866,7 +21867,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1214890558}
+  m_Mesh: {fileID: 2076025399}
 --- !u!33 &754412631
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -24615,6 +24616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 1078913705}
   shipPart: {fileID: 87156135}
+  ball: {fileID: 1616053143}
 --- !u!1001 &843421259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25614,7 +25616,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1388907490}
+  m_Mesh: {fileID: 938221115}
 --- !u!33 &922594683
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -27517,6 +27519,139 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &976902253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 976902258}
+  - component: {fileID: 976902257}
+  - component: {fileID: 976902256}
+  - component: {fileID: 976902255}
+  - component: {fileID: 976902254}
+  m_Layer: 0
+  m_Name: Ball without Rumble
+  m_TagString: Magnetic
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &976902254
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976902253}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!135 &976902255
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976902253}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &976902256
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976902253}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &976902257
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976902253}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &976902258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976902253}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 279.71, y: 1.51, z: 82.27}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1002221803
 GameObject:
   m_ObjectHideFlags: 0
@@ -34529,7 +34664,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1398474812}
+  m_Mesh: {fileID: 1879310228}
 --- !u!33 &1406643060
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -37363,7 +37498,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 346524950}
+  m_Mesh: {fileID: 2065855042}
 --- !u!33 &1504254301
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -38172,7 +38307,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 945935872}
+  m_Mesh: {fileID: 1249471801}
 --- !u!33 &1536807270
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -41114,7 +41249,7 @@ GameObject:
   - component: {fileID: 1616053144}
   - component: {fileID: 1616053148}
   m_Layer: 0
-  m_Name: Ball
+  m_Name: Ball with rumble
   m_TagString: Magnetic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41377,7 +41512,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 314847617}
+  m_Mesh: {fileID: 1493500831}
 --- !u!33 &1643147783
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -43425,7 +43560,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1230479278}
+  m_Mesh: {fileID: 1899696849}
 --- !u!33 &1736554511
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -50097,7 +50232,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1313094509}
+  m_Mesh: {fileID: 54761678}
 --- !u!33 &1998400066
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -52801,6 +52936,7 @@ SceneRoots:
   - {fileID: 691985642}
   - {fileID: 1643147787}
   - {fileID: 1616053147}
+  - {fileID: 976902258}
   - {fileID: 1033474209}
   - {fileID: 648551942}
   - {fileID: 1398308949}

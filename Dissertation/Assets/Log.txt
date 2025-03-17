@@ -13,3 +13,19 @@ User: Sam
 Boulder Start Time: 17.73827
 User: Sam
 User: Sam
+User: Sam
+Magnet Start Time: 76.65524
+User: Sam
+Magnet Start Time: 13.55593
+User: Sam
+Magnet Start Time: 10.37839
+User: Sam
+User: Sam
+Magnet Start Time: 9.408695
+User: Sam
+Magnet Start Time: 17.49888
+Magnet with rumble completion time: 60.25172
+Boulder Start Time: 123.6596
+Boulder completion time: 165.608
+Wind Start Time: 205.7266
+Wind completion time: 237.0632
