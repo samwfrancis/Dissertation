@@ -37,8 +37,12 @@ public class BasicRigidBodyPush : MonoBehaviour
 
 		// Apply the push and take strength into account
 		body.AddForce(pushDir * strength, ForceMode.Impulse);
-		Gamepad.current.SetMotorSpeeds(0.123f, 0.234f);
-		isVibrating = true;
+		if(hit.collider.CompareTag("Rumble"))
+		{
+			Gamepad.current.SetMotorSpeeds(0.123f, 0.234f);
+			isVibrating = true;
+		}
+		
 	}
 
 	void Update()

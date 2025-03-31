@@ -33,6 +33,11 @@ public class Magnet : MonoBehaviour
             if (isRumble)
             {
                 Gamepad.current.SetMotorSpeeds(0.123f, 0.234f);
+                
+            }
+            else 
+            {
+                Gamepad.current.SetMotorSpeeds(0,0);
             }
             
     }

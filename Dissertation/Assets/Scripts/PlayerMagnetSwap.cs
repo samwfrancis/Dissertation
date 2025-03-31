@@ -77,13 +77,15 @@ public class PlayerMagnetSwap : MonoBehaviour
                 magnetPointWithRumble.SetActive(false);
                 playerCamera.SetActive(true); // Assuming you have the player's camera
                 magnetCameraWithRumble.SetActive(false);
-                magnetWithRumble.transform.position = new Vector3(276.15f, 2.6f, 77f);
+                magnetWithRumble.transform.position = new Vector3(276.15f, 2.6f, 35.11f);
+                Gamepad.current.SetMotorSpeeds(0,0);
             }
             else if (distanceWithRumble < 5)
             {
                 // Switch to the magnet
                 player.SetActive(false);
                 magnetPointWithRumble.SetActive(true);
+                magnetWithRumble.transform.position = new Vector3(285.15f, 2.6f, 66.11f);
                 playerCamera.SetActive(false);
                 magnetCameraWithRumble.SetActive(true);
                 if(numberSwitchedWithRumble <= 0)
@@ -96,7 +98,7 @@ public class PlayerMagnetSwap : MonoBehaviour
             }
 
             // Toggle the state
-            isMagnetWithRumbleActive = !isMagnetWithRumbleActive;
+            
 
 
             if (isMagnetWithoutRumbleActive)
@@ -106,13 +108,14 @@ public class PlayerMagnetSwap : MonoBehaviour
                 magnetPointWithoutRumble.SetActive(false);
                 playerCamera.SetActive(true); // Assuming you have the player's camera
                 magnetCameraWithoutRumble.SetActive(false);
-                magnetWithoutRumble.transform.position = new Vector3(276.15f, 2.6f, 35.11f);
+                magnetWithoutRumble.transform.position = new Vector3(276.15f, 2.6f, 77f);
             }
             else if (distanceWithoutRumble < 5)
             {
                 // Switch to the magnet
                 player.SetActive(false);
                 magnetPointWithoutRumble.SetActive(true);
+                magnetWithoutRumble.transform.position = new Vector3(280.15f, 2.6f, 82f);
                 playerCamera.SetActive(false);
                 magnetCameraWithoutRumble.SetActive(true);
                 if(numberSwitchedWithoutRumble <= 0)
@@ -125,7 +128,7 @@ public class PlayerMagnetSwap : MonoBehaviour
             }
 
             // Toggle the state
-            isMagnetWithoutRumbleActive = !isMagnetWithoutRumbleActive;
+            
         }
     }
 

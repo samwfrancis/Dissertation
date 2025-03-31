@@ -16,7 +16,11 @@ public class MagnetController : MonoBehaviour
 
     Vector3 pos = new Vector3(280,2,40);
 
-    public Vector2 value = new Vector2(280,40);
+    public bool isRumble;
+
+    public Vector2 rumbleValue = new Vector2(280,40);
+    public Vector2 WithoutRumbleValue = new Vector2(280, 80);
+    public Vector2 value;
 
     private void OnEnable()
     {
@@ -31,12 +35,30 @@ public class MagnetController : MonoBehaviour
     void Start()
     {
         mousePos = Input.mousePosition;
-        newPos = pos;
+        if(!isRumble)
+        {
+            newPos = new Vector3(280,2,80);
+        }
+        else
+        {
+            newPos = new Vector3(280,2,40);
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!isRumble)
+        {
+            value = WithoutRumbleValue;
+            
+        }
+        else{
+            value = rumbleValue;
+        }
+
+        
         value = playerControls.ReadValue<Vector2>();
         newPos = new Vector3(newPos.x + (value.x * 0.005f), 2, newPos.z + (value.y * 0.005f));
         /*Ray ray = magnetCamera.ScreenPointToRay(newPos);

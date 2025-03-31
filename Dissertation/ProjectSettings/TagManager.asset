@@ -10,6 +10,7 @@ TagManager:
   - windArea
   - Ball
   - Boulder
+  - Rumble
   layers:
   - Default
   - TransparentFX

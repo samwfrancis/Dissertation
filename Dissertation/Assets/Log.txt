@@ -29,3 +29,63 @@ Boulder Start Time: 123.6596
 Boulder completion time: 165.608
 Wind Start Time: 205.7266
 Wind completion time: 237.0632
+User: Sam
+User: Sam
+User: Sam
+Magnet Start Time: 12.59606
+Boulder Start Time: 41.27948
+Boulder Start Time: 49.07956
+User: Sam
+Magnet Start Time: 13.30561
+Magnet Start Time: 37.7137
+User: Sam
+Magnet Start Time: 7.232597
+Magnet Start Time: 11.42458
+User: Sam
+Magnet Start Time: 7.332793
+Magnet Start Time: 8.374802
+User: Sam
+Magnet Start Time: 22.31042
+User: Sam
+Magnet Start Time: 14.17842
+User: Sam
+Magnet Start Time: 7.205571
+User: Sam
+Magnet Start Time: 7.195525
+User: Sam
+Magnet Start Time: 5.770649
+User: Sam
+Magnet Start Time: 11.29478
+User: Sam
+Magnet Start Time: 6.879096
+User: Sam
+Magnet Start Time: 12.05269
+User: Sam
+Magnet Start Time: 7.2828
+User: Sam
+Magnet Start Time: 15.55847
+User: Sam
+Magnet Start Time: 7.116286
+User: Sam
+Magnet Start Time: 4.601603
+User: Sam
+Magnet Start Time: 7.225283
+User: Sam
+Magnet Start Time: 7.533031
+User: Sam
+Magnet Start Time: 7.09406
+User: Sam
+Magnet Start Time: 6.999952
+User: Sam
+Magnet Start Time: 7.495633
+User: Sam
+Magnet Start Time: 8.951739
+User: Sam
+Magnet Start Time: 8.900487
+User: Sam
+Boulder Start Time: 17.5588
+User: Sam
+User: Sam
+User: Sam
+Boulder Start Time: 17.77599
+Boulder Start Time: 23.34944
