@@ -1,25 +1,2 @@
 Time Log
-User: Sam
-Boulder Without Rumble Start Time: 17.77689
-Boulder with rumble completion time: 20.30499
-Boulder Without Rumble Start Time: 24.17682
-Boulder without rumble completion time: 26.25927
-Wind Without Rumble Start Time: 44.43192
-Wind without rumble completion time: 54.56529
-Wind Without Rumble Start Time: 64.83372
-Wind with rumble completion time: 77.13076
-User: Sam
-User: Sam
-Boulder Without Rumble Start Time: 17.93996
-Boulder with rumble completion time: 21.4612
-Boulder Without Rumble Start Time: 24.5573
-Boulder without rumble completion time: 28.17469
-Wind Without Rumble Start Time: 48.25202
-Wind without rumble completion time: 118.8616
-Wind Without Rumble Start Time: 127.4049
-Wind with rumble completion time: 143.0258
-User: Sam
-Boulder Without Rumble Start Time: 17.51651
-Boulder with rumble completion time: 22.86585
-Boulder Without Rumble Start Time: 26.83737
-Boulder without rumble completion time: 29.20982
+

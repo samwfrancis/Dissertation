@@ -60,7 +60,7 @@ public class MagnetController : MonoBehaviour
 
         
         value = playerControls.ReadValue<Vector2>();
-        newPos = new Vector3(newPos.x + (value.x * 0.005f), 2, newPos.z + (value.y * 0.005f));
+        newPos = new Vector3(newPos.x + (value.x * 0.01f), 2, newPos.z + (value.y * 0.01f));
         /*Ray ray = magnetCamera.ScreenPointToRay(newPos);
         RaycastHit[] raycastHits = Physics.RaycastAll(ray);
         for (int i = 0; i < raycastHits.Length; i++)

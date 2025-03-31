@@ -98,7 +98,7 @@ public class PlayerMagnetSwap : MonoBehaviour
             }
 
             // Toggle the state
-            
+            isMagnetWithRumbleActive = !isMagnetWithRumbleActive;
 
 
             if (isMagnetWithoutRumbleActive)
@@ -128,7 +128,7 @@ public class PlayerMagnetSwap : MonoBehaviour
             }
 
             // Toggle the state
-            
+            isMagnetWithoutRumbleActive = !isMagnetWithoutRumbleActive;
         }
     }
 
