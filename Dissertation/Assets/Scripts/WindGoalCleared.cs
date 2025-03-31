@@ -5,12 +5,14 @@ using UnityEngine;
 public class WindGoalCleared : MonoBehaviour
 {
 
-    public GameObject shipPart;
+    public GameObject shipPartWithRumble;
+    public GameObject shipPartWithoutRumble;
     public GameObject platform;
     // Start is called before the first frame update
     void Start()
     {
-        shipPart.SetActive(false);
+        shipPartWithRumble.SetActive(false);
+        shipPartWithoutRumble.SetActive(false);
         platform.SetActive(false);
     }
 
@@ -22,9 +24,14 @@ public class WindGoalCleared : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-      if (other.CompareTag("Ball")){
-        shipPart.SetActive(true);
+      if (other.CompareTag("BallWithRumble")){
+        shipPartWithRumble.SetActive(true);
         platform.SetActive(true);
+      }
+
+      if(other.CompareTag("BallWithoutRumble"))
+      {
+        shipPartWithoutRumble.SetActive(true);
       }  
     }
 }

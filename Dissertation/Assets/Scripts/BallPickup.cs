@@ -12,13 +12,16 @@ public class BallPickup : MonoBehaviour
     public GameObject popUp;
     public float secondsElasped;
     public float windTimeStart;
-    private int numberSwitched = 0;
+    private int numberSwitched;
 
     Rigidbody ballrb;
+    
 
     public bool ballIsFollowing = false;
 
     public float distance;
+
+    public bool isRumble;
 
     public string path = Application.dataPath + "/Log.txt";
     // Start is called before the first frame update
@@ -34,8 +37,8 @@ public class BallPickup : MonoBehaviour
         secondsElasped = Time.time;
         distance = Vector3.Distance(ball.transform.position, player.transform.position);
 
-        if(distance > 2) popUp.SetActive(false);
-        if (distance < 2) popUp.SetActive(true);
+        if(distance > 1) popUp.SetActive(false);
+        if (distance < 1) popUp.SetActive(true);
         if (Gamepad.current.buttonWest.wasPressedThisFrame)
             if(ballIsFollowing)
             {
@@ -46,8 +49,18 @@ public class BallPickup : MonoBehaviour
                 if(numberSwitched <= 0)
                 {
                     windTimeStart = secondsElasped;
-                    string content = "Wind Start Time: " + windTimeStart + "\n";
-                    File.AppendAllText(path, content);
+                    if(isRumble)
+                    {
+                        string content = "Wind With Rumble Start Time: " + windTimeStart + "\n";
+                        File.AppendAllText(path, content);
+                    }
+                    else if(!isRumble)
+                    {
+                        string content = "Wind Without Rumble Start Time: " + windTimeStart + "\n";
+                        File.AppendAllText(path, content);
+                    }
+                    
+                    
                 }
                 numberSwitched += 1;
             }
@@ -59,6 +72,7 @@ public class BallPickup : MonoBehaviour
         if (ballIsFollowing)
         {
                 ballrb.AddForce((player.transform.position - ballrb.position) * 200f * Time.fixedDeltaTime);
+               
             
         }
         

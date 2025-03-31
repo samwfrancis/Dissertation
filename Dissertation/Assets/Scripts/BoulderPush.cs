@@ -7,9 +7,12 @@ public class BoulderPush : MonoBehaviour
 {
 
     public float secondsElasped;
-    public float boulderTimeStart;
+    public float boulderTimeWithRumbleStart;
+    public float boulderTimeWithoutRumbleStart;
+    public bool isRumble;
 
-    private int timesPushed = 0;
+    private int timesPushedWithRumble = 0;
+    private int timesPushedWithoutRumble = 0;
 
     public string path = Application.dataPath + "/Log.txt";
     // Start is called before the first frame update
@@ -28,13 +31,27 @@ public class BoulderPush : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Player"))
         {
-            if(timesPushed <= 0)
+            if(isRumble)
             {
-                boulderTimeStart = secondsElasped;
-                string content = "Boulder Start Time: " + boulderTimeStart + "\n";
+                if(timesPushedWithRumble <= 0)
+            {
+                boulderTimeWithRumbleStart = secondsElasped;
+                string content = "Boulder With Rumble Start Time: " + boulderTimeWithRumbleStart + "\n";
                 File.AppendAllText(path, content);
             }
-            timesPushed += 1;
+            timesPushedWithRumble += 1;
+            }
+
+            else if(!isRumble)
+            {
+                if(timesPushedWithoutRumble <= 0)
+            {
+                boulderTimeWithoutRumbleStart = secondsElasped;
+                string content = "Boulder Without Rumble Start Time: " + boulderTimeWithoutRumbleStart + "\n";
+                File.AppendAllText(path, content);
+            }
+            timesPushedWithoutRumble += 1;
+            }
         }
     }
 }

@@ -7,12 +7,16 @@ public class WindArea : MonoBehaviour
 {
     public float strength;
     public Vector3 direction;
+    public bool isRumble;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if(isRumble)
+        {
+            if (other.CompareTag("Player"))
         {
             Gamepad.current.SetMotorSpeeds(0.123f,0.234f);
+        }
         }
     }
 

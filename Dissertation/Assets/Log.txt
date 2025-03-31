@@ -1,91 +1,25 @@
-Time Log 
-
+Time Log
 User: Sam
-Magnet Start Time: 4.944054
-Boulder Start Time: 207.1785
-Boulder Completion Time: 210.4199
-Wind Start Time: 231.94
-Wind Completion Time: 247.4
-User: Sam
-Boulder Start Time: 20.15965
-User: Sam
-User: Sam
-Boulder Start Time: 17.73827
+Boulder Without Rumble Start Time: 17.77689
+Boulder with rumble completion time: 20.30499
+Boulder Without Rumble Start Time: 24.17682
+Boulder without rumble completion time: 26.25927
+Wind Without Rumble Start Time: 44.43192
+Wind without rumble completion time: 54.56529
+Wind Without Rumble Start Time: 64.83372
+Wind with rumble completion time: 77.13076
 User: Sam
 User: Sam
+Boulder Without Rumble Start Time: 17.93996
+Boulder with rumble completion time: 21.4612
+Boulder Without Rumble Start Time: 24.5573
+Boulder without rumble completion time: 28.17469
+Wind Without Rumble Start Time: 48.25202
+Wind without rumble completion time: 118.8616
+Wind Without Rumble Start Time: 127.4049
+Wind with rumble completion time: 143.0258
 User: Sam
-Magnet Start Time: 76.65524
-User: Sam
-Magnet Start Time: 13.55593
-User: Sam
-Magnet Start Time: 10.37839
-User: Sam
-User: Sam
-Magnet Start Time: 9.408695
-User: Sam
-Magnet Start Time: 17.49888
-Magnet with rumble completion time: 60.25172
-Boulder Start Time: 123.6596
-Boulder completion time: 165.608
-Wind Start Time: 205.7266
-Wind completion time: 237.0632
-User: Sam
-User: Sam
-User: Sam
-Magnet Start Time: 12.59606
-Boulder Start Time: 41.27948
-Boulder Start Time: 49.07956
-User: Sam
-Magnet Start Time: 13.30561
-Magnet Start Time: 37.7137
-User: Sam
-Magnet Start Time: 7.232597
-Magnet Start Time: 11.42458
-User: Sam
-Magnet Start Time: 7.332793
-Magnet Start Time: 8.374802
-User: Sam
-Magnet Start Time: 22.31042
-User: Sam
-Magnet Start Time: 14.17842
-User: Sam
-Magnet Start Time: 7.205571
-User: Sam
-Magnet Start Time: 7.195525
-User: Sam
-Magnet Start Time: 5.770649
-User: Sam
-Magnet Start Time: 11.29478
-User: Sam
-Magnet Start Time: 6.879096
-User: Sam
-Magnet Start Time: 12.05269
-User: Sam
-Magnet Start Time: 7.2828
-User: Sam
-Magnet Start Time: 15.55847
-User: Sam
-Magnet Start Time: 7.116286
-User: Sam
-Magnet Start Time: 4.601603
-User: Sam
-Magnet Start Time: 7.225283
-User: Sam
-Magnet Start Time: 7.533031
-User: Sam
-Magnet Start Time: 7.09406
-User: Sam
-Magnet Start Time: 6.999952
-User: Sam
-Magnet Start Time: 7.495633
-User: Sam
-Magnet Start Time: 8.951739
-User: Sam
-Magnet Start Time: 8.900487
-User: Sam
-Boulder Start Time: 17.5588
-User: Sam
-User: Sam
-User: Sam
-Boulder Start Time: 17.77599
-Boulder Start Time: 23.34944
+Boulder Without Rumble Start Time: 17.51651
+Boulder with rumble completion time: 22.86585
+Boulder Without Rumble Start Time: 26.83737
+Boulder without rumble completion time: 29.20982
