@@ -1,2 +1,15 @@
 Time Log
 
+User: Dylan
+Magnet Start Time: 10.46458
+Magnet Start Time: 70.51086
+Magnet with rumble completion time: 99.7505
+Magnet without rumble completion time: 99.7505
+Boulder Without Rumble Start Time: 142.5791
+Boulder with rumble completion time: 144.4789
+Boulder Without Rumble Start Time: 154.0153
+Boulder without rumble completion time: 156.5753
+Wind Without Rumble Start Time: 249.2641
+Wind Without Rumble Start Time: 267.8054
+Wind without rumble completion time: 410.2751
+Wind with rumble completion time: 411.1435
