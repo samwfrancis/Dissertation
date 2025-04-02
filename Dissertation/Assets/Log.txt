@@ -13,3 +13,13 @@ Wind Without Rumble Start Time: 249.2641
 Wind Without Rumble Start Time: 267.8054
 Wind without rumble completion time: 410.2751
 Wind with rumble completion time: 411.1435
+User: Lily
+Magnet Start Time: 14.48401
+Wind Without Rumble Start Time: 187.1155
+Boulder Without Rumble Start Time: 268.1167
+Boulder Without Rumble Start Time: 282.4376
+Magnet without rumble completion time: 0
+Boulder with rumble completion time: 447.2189
+Boulder without rumble completion time: 486.9838
+Magnet Start Time: 536.8949
+Magnet with rumble completion time: 563.7072

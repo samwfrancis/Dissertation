@@ -91,7 +91,7 @@ public class PlayerMagnetSwap : MonoBehaviour
                 if(numberSwitchedWithRumble <= 0)
                 {
                     magnetTimeStartWithRumble = secondsElasped;
-                    string content = "Magnet Start Time: " + magnetTimeStartWithRumble + "\n";
+                    string content = "Magnet With Rumble Start Time: " + magnetTimeStartWithRumble + "\n";
                     File.AppendAllText(path, content);
                 }
                 numberSwitchedWithRumble =+ 1;
@@ -121,7 +121,7 @@ public class PlayerMagnetSwap : MonoBehaviour
                 if(numberSwitchedWithoutRumble <= 0)
                 {
                     magnetTimeStartWithoutRumble = secondsElasped;
-                    string content = "Magnet Start Time: " + magnetTimeStartWithoutRumble + "\n";
+                    string content = "Magnet Without Rumble Start Time: " + magnetTimeStartWithoutRumble + "\n";
                     File.AppendAllText(path, content);
                 }
                 numberSwitchedWithoutRumble =+ 1;
