@@ -36,3 +36,15 @@ Wind Without Rumble Start Time: 247.2732
 Wind without rumble completion time: 308.6876
 Wind with rumble completion time: 310.7131
 Wind Without Rumble Start Time: 326.8425
+User: Nav
+Magnet Without Rumble Start Time: 14.23987
+Magnet without rumble completion time: 0
+Boulder Without Rumble Start Time: 195.9182
+Boulder without rumble completion time: 201.5593
+Boulder Without Rumble Start Time: 232.0597
+Boulder with rumble completion time: 244.0473
+Magnet With Rumble Start Time: 350.5865
+Magnet with rumble completion time: 398.9526
+Wind Without Rumble Start Time: 502.2539
+Wind without rumble completion time: 532.7617
+Wind with rumble completion time: 540.3757
