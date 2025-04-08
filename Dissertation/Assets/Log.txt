@@ -48,3 +48,46 @@ Magnet with rumble completion time: 398.9526
 Wind Without Rumble Start Time: 502.2539
 Wind without rumble completion time: 532.7617
 Wind with rumble completion time: 540.3757
+User: Iadi
+Magnet Without Rumble Start Time: 39.07119
+Magnet without rumble completion time: 0
+Magnet With Rumble Start Time: 132.5215
+Magnet with rumble completion time: 171.8441
+Boulder Without Rumble Start Time: 229.5755
+Boulder with rumble completion time: 239.077
+Boulder Without Rumble Start Time: 272.1377
+Boulder without rumble completion time: 289.1627
+Wind Without Rumble Start Time: 352.4041
+Wind without rumble completion time: 390.8941
+Wind with rumble completion time: 392.0869
+User: Chris
+Magnet With Rumble Start Time: 14.486
+Magnet with rumble completion time: 44.49121
+Magnet Without Rumble Start Time: 50.01388
+Magnet without rumble completion time: 44.49121
+Wind Without Rumble Start Time: 146.4045
+Wind without rumble completion time: 235.3124
+Wind Without Rumble Start Time: 245.127
+Wind with rumble completion time: 295.1815
+User: Pheobe
+Magnet Without Rumble Start Time: 18.95573
+Magnet without rumble completion time: 0
+Magnet With Rumble Start Time: 81.30196
+Magnet with rumble completion time: 116.5497
+Boulder Without Rumble Start Time: 177
+Wind Without Rumble Start Time: 205.7519
+Wind without rumble completion time: 259.8298
+Wind Without Rumble Start Time: 277.395
+Wind with rumble completion time: 328.2223
+Boulder Without Rumble Start Time: 365.2996
+Boulder without rumble completion time: 381.813
+Boulder with rumble completion time: 396.9518
+User: Isabel
+Magnet Without Rumble Start Time: 18.76717
+Magnet without rumble completion time: 0
+Magnet With Rumble Start Time: 153.1112
+Magnet with rumble completion time: 204.3824
+Wind Without Rumble Start Time: 406.2717
+Wind without rumble completion time: 441.5071
+Wind Without Rumble Start Time: 470.5213
+Wind with rumble completion time: 514.9489
