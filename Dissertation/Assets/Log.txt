@@ -1,11 +1,11 @@
 Time Log
 
 User: Dylan
-Magnet Start Time: 10.46458
-Magnet Start Time: 70.51086
-Magnet with rumble completion time: 99.7505
+Magnet with rumble Start Time: 10.46458
+Magnet without rumble Start Time: 70.51086
+Magnet with rumble completion time: 30.0135
 Magnet without rumble completion time: 99.7505
-Boulder Without Rumble Start Time: 142.5791
+Boulder With Rumble Start Time: 142.5791
 Boulder with rumble completion time: 144.4789
 Boulder Without Rumble Start Time: 154.0153
 Boulder without rumble completion time: 156.5753
@@ -14,22 +14,22 @@ Wind Without Rumble Start Time: 267.8054
 Wind without rumble completion time: 410.2751
 Wind with rumble completion time: 411.1435
 User: Lily
-Magnet Start Time: 14.48401
+Magnet without Start Time: 14.48401
 Wind Without Rumble Start Time: 187.1155
-Boulder Without Rumble Start Time: 268.1167
+Boulder With Rumble Start Time: 268.1167
 Boulder Without Rumble Start Time: 282.4376
-Magnet without rumble completion time: 0
+Magnet without rumble completion time: 300.2791
 Boulder with rumble completion time: 447.2189
 Boulder without rumble completion time: 486.9838
-Magnet Start Time: 536.8949
+Magnet with rumble Start Time: 536.8949
 Magnet with rumble completion time: 563.7072
 User: Alfie
-Magnet Without Rumble Start Time: 18.77224
-Magnet With Rumble Start Time: 75.79357
-Magnet with rumble completion time: 109.4143
+Magnet With Rumble Start Time: 18.77224
+Magnet Without Rumble Start Time: 75.79357
+Magnet with rumble completion time: 52.7053
 Magnet without rumble completion time: 109.4143
 Boulder Without Rumble Start Time: 142.917
-Boulder Without Rumble Start Time: 154.9169
+Boulder With Rumble Start Time: 154.9169
 Boulder without rumble completion time: 168.3326
 Boulder with rumble completion time: 202.1883
 Wind Without Rumble Start Time: 247.2732
@@ -38,10 +38,10 @@ Wind with rumble completion time: 310.7131
 Wind Without Rumble Start Time: 326.8425
 User: Nav
 Magnet Without Rumble Start Time: 14.23987
-Magnet without rumble completion time: 0
+Magnet without rumble completion time: 54.1507
 Boulder Without Rumble Start Time: 195.9182
 Boulder without rumble completion time: 201.5593
-Boulder Without Rumble Start Time: 232.0597
+Boulder With Rumble Start Time: 232.0597
 Boulder with rumble completion time: 244.0473
 Magnet With Rumble Start Time: 350.5865
 Magnet with rumble completion time: 398.9526
@@ -50,10 +50,10 @@ Wind without rumble completion time: 532.7617
 Wind with rumble completion time: 540.3757
 User: Iadi
 Magnet Without Rumble Start Time: 39.07119
-Magnet without rumble completion time: 0
+Magnet without rumble completion time: 100.0845
 Magnet With Rumble Start Time: 132.5215
 Magnet with rumble completion time: 171.8441
-Boulder Without Rumble Start Time: 229.5755
+Boulder With Rumble Start Time: 229.5755
 Boulder with rumble completion time: 239.077
 Boulder Without Rumble Start Time: 272.1377
 Boulder without rumble completion time: 289.1627
@@ -64,17 +64,17 @@ User: Chris
 Magnet With Rumble Start Time: 14.486
 Magnet with rumble completion time: 44.49121
 Magnet Without Rumble Start Time: 50.01388
-Magnet without rumble completion time: 44.49121
+Magnet without rumble completion time: 76.6890
 Wind Without Rumble Start Time: 146.4045
 Wind without rumble completion time: 235.3124
 Wind Without Rumble Start Time: 245.127
 Wind with rumble completion time: 295.1815
 User: Pheobe
 Magnet Without Rumble Start Time: 18.95573
-Magnet without rumble completion time: 0
+Magnet without rumble completion time: 62.5326
 Magnet With Rumble Start Time: 81.30196
 Magnet with rumble completion time: 116.5497
-Boulder Without Rumble Start Time: 177
+Boulder With Rumble Start Time: 177
 Wind Without Rumble Start Time: 205.7519
 Wind without rumble completion time: 259.8298
 Wind Without Rumble Start Time: 277.395
@@ -84,7 +84,7 @@ Boulder without rumble completion time: 381.813
 Boulder with rumble completion time: 396.9518
 User: Isabel
 Magnet Without Rumble Start Time: 18.76717
-Magnet without rumble completion time: 0
+Magnet without rumble completion time: 110.0245
 Magnet With Rumble Start Time: 153.1112
 Magnet with rumble completion time: 204.3824
 Wind Without Rumble Start Time: 406.2717
@@ -95,8 +95,8 @@ User: Mike
 Magnet With Rumble Start Time: 10.83995
 Magnet with rumble completion time: 43.31869
 Magnet Without Rumble Start Time: 57.04916
-Magnet without rumble completion time: 43.31869
-Boulder Without Rumble Start Time: 121.9983
+Magnet without rumble completion time: 77.9236
+Boulder With Rumble Start Time: 121.9983
 Boulder with rumble completion time: 127.9841
 Boulder Without Rumble Start Time: 141.2581
 Boulder without rumble completion time: 147.4021
