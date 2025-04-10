@@ -10,7 +10,7 @@ Boulder with rumble completion time: 144.4789
 Boulder Without Rumble Start Time: 154.0153
 Boulder without rumble completion time: 156.5753
 Wind Without Rumble Start Time: 249.2641
-Wind Without Rumble Start Time: 267.8054
+Wind With Rumble Start Time: 267.8054
 Wind without rumble completion time: 410.2751
 Wind with rumble completion time: 411.1435
 User: Lily
@@ -35,7 +35,7 @@ Boulder with rumble completion time: 202.1883
 Wind Without Rumble Start Time: 247.2732
 Wind without rumble completion time: 308.6876
 Wind with rumble completion time: 310.7131
-Wind Without Rumble Start Time: 326.8425
+Wind With Rumble Start Time: 326.8425
 User: Nav
 Magnet Without Rumble Start Time: 14.23987
 Magnet without rumble completion time: 54.1507
@@ -67,7 +67,7 @@ Magnet Without Rumble Start Time: 50.01388
 Magnet without rumble completion time: 76.6890
 Wind Without Rumble Start Time: 146.4045
 Wind without rumble completion time: 235.3124
-Wind Without Rumble Start Time: 245.127
+Wind With Rumble Start Time: 245.127
 Wind with rumble completion time: 295.1815
 User: Pheobe
 Magnet Without Rumble Start Time: 18.95573
@@ -77,7 +77,7 @@ Magnet with rumble completion time: 116.5497
 Boulder With Rumble Start Time: 177
 Wind Without Rumble Start Time: 205.7519
 Wind without rumble completion time: 259.8298
-Wind Without Rumble Start Time: 277.395
+Wind With Rumble Start Time: 277.395
 Wind with rumble completion time: 328.2223
 Boulder Without Rumble Start Time: 365.2996
 Boulder without rumble completion time: 381.813
@@ -89,7 +89,7 @@ Magnet With Rumble Start Time: 153.1112
 Magnet with rumble completion time: 204.3824
 Wind Without Rumble Start Time: 406.2717
 Wind without rumble completion time: 441.5071
-Wind Without Rumble Start Time: 470.5213
+Wind With Rumble Start Time: 470.5213
 Wind with rumble completion time: 514.9489
 User: Mike
 Magnet With Rumble Start Time: 10.83995
@@ -101,6 +101,6 @@ Boulder with rumble completion time: 127.9841
 Boulder Without Rumble Start Time: 141.2581
 Boulder without rumble completion time: 147.4021
 Wind Without Rumble Start Time: 171.8839
-Wind Without Rumble Start Time: 189.9441
+Wind With Rumble Start Time: 189.9441
 Wind with rumble completion time: 243.414
 Wind without rumble completion time: 243.414
