@@ -37,7 +37,7 @@ public class BoulderPush : MonoBehaviour
             {
                 boulderTimeWithRumbleStart = secondsElasped;
                 string content = "Boulder With Rumble Start Time: " + boulderTimeWithRumbleStart + "\n";
-                File.AppendAllText(path, content);
+                //File.AppendAllText(path, content);
             }
             timesPushedWithRumble += 1;
             }
@@ -48,7 +48,7 @@ public class BoulderPush : MonoBehaviour
             {
                 boulderTimeWithoutRumbleStart = secondsElasped;
                 string content = "Boulder Without Rumble Start Time: " + boulderTimeWithoutRumbleStart + "\n";
-                File.AppendAllText(path, content);
+                //File.AppendAllText(path, content);
             }
             timesPushedWithoutRumble += 1;
             }

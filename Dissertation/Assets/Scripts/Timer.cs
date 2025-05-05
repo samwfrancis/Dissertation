@@ -66,7 +66,7 @@ public class Timer : MonoBehaviour
                 if (gamepad.buttonWest.wasPressedThisFrame){
                 magnetWithRumbleTimeComplete = secondsElasped;
                 string content = "Magnet with rumble completion time: " + magnetWithRumbleTimeComplete + "\n";
-                File.AppendAllText(path, content);
+                //File.AppendAllText(path, content);
                 Destroy(shipPart1);
                 popUp1.SetActive(false);
             }
@@ -82,7 +82,7 @@ public class Timer : MonoBehaviour
                 if (gamepad.buttonWest.wasPressedThisFrame){
                 boulderWithRumbleTimeComplete = secondsElasped;
                 string content = "Boulder with rumble completion time: " + boulderWithRumbleTimeComplete + "\n";
-                File.AppendAllText(path, content);
+                //File.AppendAllText(path, content);
                 Destroy(shipPart2);
                 popUp2.SetActive(false);
                 }
@@ -98,7 +98,7 @@ public class Timer : MonoBehaviour
                 if (gamepad.buttonWest.wasPressedThisFrame){
                 boulderWithoutRumbleTimeComplete = secondsElasped;
                 string content = "Boulder without rumble completion time: " + boulderWithoutRumbleTimeComplete + "\n";
-                File.AppendAllText(path, content);
+                //File.AppendAllText(path, content);
                 Destroy(shipPart6);
                 popUp6.SetActive(false);
                 }
@@ -114,7 +114,7 @@ public class Timer : MonoBehaviour
                 if (gamepad.buttonWest.wasPressedThisFrame){
                 windWithRumbleTimeComplete = secondsElasped;
                 string content = "Wind with rumble completion time: " + windWithRumbleTimeComplete + "\n";
-                File.AppendAllText(path, content);
+                //File.AppendAllText(path, content);
                 Destroy(shipPart3);
                 popUp3.SetActive(false);
                 }
@@ -130,7 +130,7 @@ public class Timer : MonoBehaviour
                 if (gamepad.buttonWest.wasPressedThisFrame){
                 windWithoutRumbleTimeComplete = secondsElasped;
                 string content = "Wind without rumble completion time: " + windWithoutRumbleTimeComplete + "\n";
-                File.AppendAllText(path, content);
+                //File.AppendAllText(path, content);
                 Destroy(shipPart5);
                 popUp5.SetActive(false);
                 }
@@ -147,7 +147,7 @@ public class Timer : MonoBehaviour
                 if (gamepad.buttonWest.wasPressedThisFrame){
                 magnetWithoutRumbleTimeComplete = secondsElasped;
                 string content = "Magnet without rumble completion time: " + magnetWithRumbleTimeComplete + "\n";
-                File.AppendAllText(path, content);
+                //File.AppendAllText(path, content);
                 Destroy(shipPart4);
                 popUp4.SetActive(false);
             }
@@ -163,14 +163,14 @@ public class Timer : MonoBehaviour
     void CreateText()
     {
 
-        if(!File.Exists(path))
+        /*if(!File.Exists(path))
         {
             File.WriteAllText(path, "Time Log \n\n");
         }
 
         string content = "User: " + user + "\n";
 
-        File.AppendAllText(path, content);
+        File.AppendAllText(path, content);*/
     }
 
 }

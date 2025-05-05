@@ -52,12 +52,12 @@ public class BallPickup : MonoBehaviour
                     if(isRumble)
                     {
                         string content = "Wind With Rumble Start Time: " + windTimeStart + "\n";
-                        File.AppendAllText(path, content);
+                        //File.AppendAllText(path, content);
                     }
                     else if(!isRumble)
                     {
                         string content = "Wind Without Rumble Start Time: " + windTimeStart + "\n";
-                        File.AppendAllText(path, content);
+                        //File.AppendAllText(path, content);
                     }
                     
                     
